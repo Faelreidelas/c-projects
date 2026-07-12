@@ -1,12 +1,15 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
+
 
 int main(int argc, char const *argv[])
 {
     /* code */
-    double result = pow (3,2);
-    cout << result;
+    for(int i = 10; i >= 0; i--){
+        cout << i << " testando  \n" ;
+        
 
+    }
+    
     return 0;
 }

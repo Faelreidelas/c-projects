@@ -1,12 +1,13 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
+#include <cstdlib>
+
 
 int main(int argc, char const *argv[])
 {
     /* code */
-    double result = pow (3,2);
-    cout << result;
-
+    srand(5);
+    int nuber = rand();
+    cout << nuber;
     return 0;
 }
