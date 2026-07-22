@@ -1,0 +1,46 @@
+====================================================================
+          ROTEIRO DE ESTUDO DE PONTEIROS PARA PURPLE TEAM / RE
+====================================================================
+
+[ O QUE ESTUDAR - PRIORIDADE MAXIMA ]
+--------------------------------------------------------------------
+1. ARITMETICA DE PONTEIROS
+   - Navegacao em memoria de byte em byte (p + offset).
+   - Essencial para ler cabecalhos PE/ELF, structs e buffers brutos.
+
+2. PONTEIROS DUPLOS (type**)
+   - Entender como o Windows lida com Handles e ponteiros de ponteiros.
+   - Muito usado nas APIS do Windows (Win32 / NTAPI).
+
+3. VOID* E CASTING (reinterpret_cast)
+   - Ponteiros genericos para memoria em bruto.
+   - Como converter um endereco generico para uma struct especifica.
+
+4. PONTEIROS PARA FUNCOES
+   - Sintaxe: void (*func_ptr)()
+   - VITAL: Como chamadas dinamicas (GetProcAddress) e hooks funcionam.
+
+5. STRUCTS + PONTEIROS (Operador ->)
+   - Navegacao por estruturas na RAM (ex: PEB, TEB, EPROCESS).
+   - Acessar membros de structs a partir de um endereco base.
+
+6. ALOCACAO DINAMICA DE MEMORIA (RAW MEMORY)
+   - Uso de malloc, free, new, delete.
+   - Entender alocacao por paginas no SO (VirtualAlloc / mmap) e permissoes (RWX).
+
+
+[ O QUE IGNORAR / DEIXAR PARA DEPOIS ]
+--------------------------------------------------------------------
+1. SMART POINTERS (std::unique_ptr, std::shared_ptr)
+   - Sao abstracoes do C++ moderno. Em Binarios/Assembly, tudo vira raw pointer.
+
+2. ARITMETICA COMPLEXA DIRETA EM VOID*
+   - O padrao C++ nao permite. Foque em converter para BYTE* ou char* primeiro.
+
+3. SOBRECARGA DE OPERADORES DE PONTEIROS (operator->)
+   - Recurso de design C++ que raramente importa em engenharia reversa.
+
+4. SINTAXE DE PONTEIROS PARA MEMBROS DE CLASSE
+   - Entenda o conceito de vtable (tabela virtual), mas ignore a sintaxe teorica complexa.
+
+====================================================================
